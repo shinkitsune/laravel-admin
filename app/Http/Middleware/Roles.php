@@ -23,10 +23,10 @@ class Roles
     {   
         $logged = Auth::user();
 
-        /*if (!Permissions::permissaoUsuario($logged, Route::getCurrentRoute()->getActionName())) {
+        if (!Permissions::permissaoUsuario($logged, Route::getCurrentRoute()->getActionName())) {
             Session::flash('flash_error', "Você não tem permissão de acessar essa página.");
             return Redirect::to('/');
-        }*/   
+        }  
 
         return $next($request);
     }
