@@ -12,8 +12,8 @@
         
         {!! Form::open(['url' => 'permissions/save', 'method' => 'post']) !!}
 
-        <input type="hidden" name="id" value="{{$user->id}}">
-            
+        {!! Form::hidden('id', $user->id) !!}
+
         <div class="col-md-12">
 
             @foreach($lista as $key => $value)
@@ -21,7 +21,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
 
-                            <?php 
+                            @php 
                            
                                 $label = str_replace('App\Http\Controllers', '', $value);
 
@@ -72,7 +72,8 @@
                                         $label[1] = 'Mudar perfil padrão';
                                         break;
                                 }
-                            ?>
+                                
+                            @endphp
 
                             <li>
 
