@@ -12,13 +12,13 @@ class Permissions extends Model
 
     protected $guarded = ['_token'];
 
-    static public function permissaoUsuario($logged, $perm)
+    static public function permissaoUsuario($logged, $permissao)
     {	
         if (isset($logged->perfil) && $logged->perfil->administrator) {
             return true;
         }
         
-        $permissao = self::where('controller', $perm)->where('user_id', Auth::user()->id)->count();
+        $permissao = self::where('role', $permissao)->where('user_id', Auth::user()->id)->count();
 
         if ($permissao) {
         	return true;
@@ -44,6 +44,6 @@ class Permissions extends Model
 
     static public function hasPermission($permissao)
     {
-    	return self::where('controller', $permissao)->where('user_id', Auth::user()->id)->count();
+    	return self::where('role', $permissao)->where('user_id', Auth::user()->id)->count();
     }
 }
