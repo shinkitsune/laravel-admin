@@ -18,6 +18,11 @@ $ cd laravel-admin
 - Copy `.env.example` to `.env` and add your configs
 ```
 $ cp .env.example .env
+
+```
+- Install PHP dependencies ([composer](http://getcomposer.org))
+```
+$ composer install
 ```
 
 - Generate new key
@@ -25,14 +30,17 @@ $ cp .env.example .env
 $ php artisan key:generate
 ```
 
-- Install PHP dependencies ([composer](http://getcomposer.org))
-```
-$ composer install
-```
-
 - Configure your database access
 ```
 $ vim .env
+```
+
+- Connect your database and create database with name
+```
+$ homestead
+```
+
+- Create user homestead with password admin in your database;
 ```
 
 - Run artisan commands.
