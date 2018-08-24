@@ -20,14 +20,14 @@ $ cd laravel-admin
 $ cp .env.example .env
 ```
 
-- Generate new key
-```
-$ php artisan key:generate
-```
-
 - Install PHP dependencies ([composer](http://getcomposer.org))
 ```
 $ composer install
+```
+
+- Generate new key
+```
+$ php artisan key:generate
 ```
 
 - Configure your database access
