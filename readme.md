@@ -42,6 +42,14 @@ $ vim .env
 $ php artisan migrate --seed && php artisan db:seed
 ```
 
+## Run tests
+```
+$ ./vendor/bin/phpunit 
+```
+
+- *user: meusistema@rizer.com.br
+- *password: admin
+
 ## Server start
 
 - Open new terminal
