@@ -37,11 +37,12 @@ $ vim .env
 
 - Connect your database and create database with name
 ```
-$ homestead
+$ create database homestead;
 ```
 
-- Create user homestead with password admin in your database;
+- Create user 'homestead' with password 'admin' in your database;
 ```
+$ CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'new_password';
 
 - Run artisan commands.
 ```
