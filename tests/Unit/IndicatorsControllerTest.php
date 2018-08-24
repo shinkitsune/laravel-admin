@@ -115,9 +115,9 @@ class IndicatorsControllerTest extends TestCase
 
 	    $response = $this->post('/indicators/update', [
 	    	'id' => $indicator->id,
-	    	'name' => $rdn,
+	    	'name' => 'TESTE',
 	    	'query' => 'SELECT * FROM users;',
-	    	'color' => 'aqua',
+	    	'color' => $rdn,
 	    	'description' => '', 
 	    	'link' => '',
 	    	'size' => 2,
@@ -127,7 +127,7 @@ class IndicatorsControllerTest extends TestCase
 
 	    $new = Indicators::find($indicator->id);
 
-	    $this->assertTrue($new->name == $rdn);
+	    $this->assertTrue($new->color == $rdn);
 
 		$response->assertRedirect('/indicators');
 
