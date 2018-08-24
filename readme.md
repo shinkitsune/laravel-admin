@@ -43,6 +43,7 @@ $ create database homestead;
 - Create user 'homestead' with password 'admin' in your database;
 ```
 $ CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'new_password';
+```
 
 - Run artisan commands.
 ```
