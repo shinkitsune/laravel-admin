@@ -50,6 +50,8 @@ class IndicatorsController extends Controller
             $indicators->size = $data['size'];
             $indicators->glyphicon = $data['glyphicon'];
 
+            $indicators->r_auth = Auth::user()->id;
+
             $indicators->save();
 
             Session::flash('flash_success', "Indicador cadastrado com sucesso!");
@@ -104,8 +106,8 @@ class IndicatorsController extends Controller
     public function destroy(Request $request)
     {   
         try {
-         
-            $indicators = Indicators::find($request->get('id'))->delete();
+
+            Indicators::find($request->get('id'))->delete();
 
             Session::flash('flash_success', "Indicador excluído com sucesso!");
 

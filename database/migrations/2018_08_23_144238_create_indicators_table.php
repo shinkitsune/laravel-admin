@@ -17,7 +17,7 @@ class CreateIndicatorsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('query');
-            $table->string('color')->nullable('aqua');
+            $table->string('color')->default('aqua');
             $table->text('description')->nullable();
             $table->string('link')->nullable();
             $table->integer('size')->default(2);
