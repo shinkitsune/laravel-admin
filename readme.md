@@ -3,7 +3,7 @@
 Painel admin para controle de usuários, gerenciamento de perfis de acesso, permissões, relatórios, indicadores e logs.
 Além desses módulos, já está implementado um sistema de autenticação, cadastro de novos usuários e recuração de senha.
 
-![img](http://localhost/http/rizer/github/laravel-admin/public/images/laravel.png)
+![img](public/images/laravel.png)
 
 ## Installation
 
